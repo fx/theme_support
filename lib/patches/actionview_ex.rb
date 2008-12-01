@@ -21,7 +21,6 @@ module ActionView
     end
     
     themed_file = File.join(search_path[0], "#{template_file_name}.#{template_format}.erb")
-logger.debug "FUCK YOU: #{themed_file}"
     if File.exists?(themed_file)
       return Template.new(themed_file, search_path)
     else
