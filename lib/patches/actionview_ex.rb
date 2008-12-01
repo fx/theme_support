@@ -1,7 +1,6 @@
 # Extending <tt>ActionView::Base</tt> to support rendering themes
 #
 module ActionView
-  
   # Extending <tt>ActionView::Base</tt> to support rendering themes
   class Base
   private
@@ -22,6 +21,7 @@ module ActionView
     end
     
     themed_file = File.join(search_path[0], "#{template_file_name}.#{template_format}.erb")
+logger.debug "FUCK YOU: #{themed_file}"
     if File.exists?(themed_file)
       return Template.new(themed_file, search_path)
     else

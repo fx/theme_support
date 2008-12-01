@@ -12,7 +12,7 @@ class ActionController::Routing::RouteSet
     create_theme_routes(map)
     yield map
 
-    named_routes.install
+    install_helpers
   end
 
   # Creates the required routes for the <tt>ThemeController</tt>...
